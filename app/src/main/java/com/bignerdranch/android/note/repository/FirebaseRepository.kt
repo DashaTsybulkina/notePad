@@ -23,8 +23,27 @@ class FirebaseRepository() {
     val myRef = database.child("note")
     private var currentUser = auth.currentUser
 
-    fun getCurrentUser(): FirebaseUser? {
-        return currentUser
+
+    var connected = false
+
+    init {
+        val connectedRef = Firebase.database.getReference(".info/connected")
+        connectedRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val connected = snapshot.getValue(Boolean::class.java) ?: false
+                if (connected) {
+                    Log.d("FIREBASE", "connected")
+                    this@FirebaseRepository.connected = true
+                } else {
+                    Log.d("FIREBASE", "not connected")
+                    this@FirebaseRepository.connected = false
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.w("FIREBASE", "Listener was cancelled")
+            }
+        })
     }
 
     fun signIn(email: String, password: String): Boolean {
@@ -61,26 +80,30 @@ class FirebaseRepository() {
 
     fun readDatabase(): MutableLiveData<Response> {
         val mutableLiveData = MutableLiveData<Response>()
-        if (currentUser != null) {
+        if (connected) {
+            if (currentUser != null) {
 
-            myRef.child(currentUser!!.uid).get().addOnCompleteListener { task ->
-                val response = Response()
-                if (task.isSuccessful) {
-                    val result = task.result
-                    result?.let {
-                        response.notes = it.children.map { note ->
-                            note.getValue(Note::class.java)!!
+                myRef.child(currentUser!!.uid).get().addOnCompleteListener { task ->
+                    val response = Response()
+                    if (task.isSuccessful) {
+                        val result = task.result
+                        result?.let {
+                            response.notes = it.children.map { note ->
+                                note.getValue(Note::class.java)!!
+                            }
                         }
+                    } else {
+                        response.exception = task.exception
                     }
-                } else {
-                    response.exception = task.exception
+                    mutableLiveData.value = response
                 }
-                mutableLiveData.value = response
             }
+        } else{
+            val response = Response()
+            response.exception = Exception("not connected")
+            mutableLiveData.value = response
         }
-        CoroutineScope(Dispatchers.IO).launch {
-            delay(1000000L)
-        }
+
         return mutableLiveData
 
     }

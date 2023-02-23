@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity(), Listener {
     }
 
     private fun initActivity() {
-        viewModel.getFirebaseNotes()
         viewModel.getFirebaseNotes().observe(this) {
             if (it.exception != null || it.notes?.size == 0) {
                 viewModel.getNotes()
