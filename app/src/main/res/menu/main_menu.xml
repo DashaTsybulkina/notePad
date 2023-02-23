@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/searchItems"
+        android:title="search"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/search"
+        app:actionViewClass="android.widget.SearchView"/>
+
+    <item
+        android:id="@+id/sync"
+        android:title="sync"
+        app:showAsAction="ifRoom|withText"
+        android:icon="@drawable/sync" />
+
+    <item
+        android:id="@+id/exit"
+        android:title="exit"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/exit" />
+
+</menu>

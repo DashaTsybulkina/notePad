@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android project/note/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121" />
+        <entry key="..\:/android project/note/app/src/main/res/drawable/add.xml" value="0.241" />
+        <entry key="..\:/android project/note/app/src/main/res/drawable/ic_launcher_background.xml" value="0.121" />
+        <entry key="..\:/android project/note/app/src/main/res/drawable/save.xml" value="0.241" />
+        <entry key="..\:/android project/note/app/src/main/res/drawable/search.xml" value="0.241" />
+        <entry key="..\:/android project/note/app/src/main/res/drawable/up_arrow.xml" value="0.241" />
+        <entry key="..\:/android project/note/app/src/main/res/drawable/update.xml" value="0.121" />
+        <entry key="..\:/android project/note/app/src/main/res/font/josefin_sean_bold_italic.xml" value="0.2791666666666667" />
+        <entry key="..\:/android project/note/app/src/main/res/layout/activity_add_node.xml" value="0.22826086956521738" />
+        <entry key="..\:/android project/note/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/android project/note/app/src/main/res/layout/activity_sign_in.xml" value="0.22826086956521738" />
+        <entry key="..\:/android project/note/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/android project/note/app/src/main/res/layout/activity_update.xml" value="0.136" />
+        <entry key="..\:/android project/note/app/src/main/res/layout/list_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/android project/note/app/src/main/res/menu/main_menu.xml" value="0.25" />
+        <entry key="..\:/android project/note/app/src/main/res/menu/note_edit_menu.xml" value="0.25" />
+        <entry key="..\:/android project/note/app/src/main/res/menu/update_menu.xml" value="0.10989583333333333" />
+        <entry key="..\:/bsuir/6 sem/rpodmp/note/app/src/main/res/layout/activity_add_node.xml" value="0.1" />
+        <entry key="..\:/bsuir/6 sem/rpodmp/note/app/src/main/res/menu/main_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

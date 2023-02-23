@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Notepad</string>
+
+    <string name="enter_registration">У вас нет аккаунта?</string>
+    <string name="entering_password">Пароль:</string>
+    <string name="entering_email">E-Mail:</string>
+    <string name="entering_name">Фамилия имя: </string>
+    <string name="enter">Войти</string>
+    <string name="registration">Зарегистрироваться</string>
+
+    <string name="count_of_char">| 0 символов</string>
+
+
+
+</resources>
